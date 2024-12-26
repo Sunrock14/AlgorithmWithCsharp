@@ -1,4 +1,5 @@
 using Cryptography.App.Models;
+using Cryptography.App.Services.Asymmetrics;
 using Cryptography.App.Services.Historicals;
 using Microsoft.OpenApi.Models;
 using static Cryptography.App.Services.Historicals.AtbashCipher;
@@ -69,5 +70,22 @@ app.MapPost("/vigenere-decrypt", (DecryptRequest request) =>
     var decryptedText = VigenereDecrypt(request.Ciphertext);
     return Results.Ok(new { DecryptedText = decryptedText });
 });
+
+//app.MapPost("/ecc-encrypt", (EncryptRequest request) =>
+//{
+//    var curve = new EllipticCurve();
+
+//    // Anahtar çifti oluþtur
+//    var (publicKey, privateKey) = curve.GenerateKeyPair();
+
+//    // Þifrelenecek mesajý bir eðri noktasý olarak temsil et
+//    var message = new Point(123456789, 987654321);
+
+//    // Mesajý þifrele
+//    var (C1, C2) = curve.Encrypt(message, publicKey);
+
+//    // Þifreyi çöz
+//    var decryptedMessage = curve.Decrypt(C1, C2, privateKey);
+//});
 app.Run();
 
