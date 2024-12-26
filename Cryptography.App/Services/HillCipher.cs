@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Components.Forms;
-using System.Diagnostics.Metrics;
-using System.Numerics;
-using System.Reflection.Metadata;
-using System.Runtime.ConstrainedExecution;
-
-namespace Cryptography.App.Services;
+﻿namespace Cryptography.App.Services;
 /// <summary>
 /// Tarihçesi
 /// 
@@ -100,7 +94,7 @@ public class HillCipher
         int determinant = Determinant(matrix);
         int determinantInverse = ModInverse(determinant, _mod);
 
-        int[,] adjugate = AdjugateMatrix(matrix);
+        int[,] adjugate = AdjointMatrix(matrix);
         int[,] inverse = new int[size, size];
 
         for (int i = 0; i < size; i++)
@@ -115,19 +109,18 @@ public class HillCipher
         return inverse;
     }
     /// <summary>
-     /// 2x2 matrisin determinantını hesaplar
-     /// </summary>
-     /// <param name="matrix">Determinantı hesaplanacak matrix</param>
-     /// <returns>Determinant değeri</returns>
-     /// <exception cref="NotImplementedException">2x2'den büyük matrisler için fırlatılır</exception>
+    /// 2x2 matrisin determinantını hesaplar
+    /// </summary>
+    /// <param name="matrix">Determinantı hesaplanacak matrix</param>
+    /// <returns>Determinant değeri</returns>
+    /// <exception cref="NotImplementedException">2x2'den büyük matrisler için fırlatılır</exception>
     private int Determinant(int[,] matrix)
     {
-        // Only supports 2x2 matrices for simplicity  
         if (matrix.GetLength(0) == 2)
         {
             return (matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0]) % _mod;
         }
-        throw new NotImplementedException("Determinant calculation for larger matrices is not implemented.");
+        throw new NotImplementedException("Matris 2x2'li değil!");
     }
     /// <summary>
     /// Modüler çarpımsal tersi hesaplar
@@ -143,12 +136,16 @@ public class HillCipher
         {
             if ((a * x) % m == 1) return x;
         }
-        throw new ArgumentException("No modular inverse exists.");
+        throw new ArgumentException("Matrisin çarpımsal tersi yok");
     }
-
-    private int[,] AdjugateMatrix(int[,] matrix)
+    /// <summary>
+    /// Ekli matrisi hesaplar
+    /// </summary>
+    /// <param name="matrix"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    private int[,] AdjointMatrix(int[,] matrix)
     {
-        // Only supports 2x2 matrices for simplicity  
         if (matrix.GetLength(0) == 2)
         {
             return new int[,]
@@ -157,7 +154,7 @@ public class HillCipher
                 { -matrix[1, 0], matrix[0, 0] }
             };
         }
-        throw new NotImplementedException("Adjugate calculation for larger matrices is not implemented.");
+        throw new NotImplementedException("Matris 2x2'li değil!");
     }
 
     /// <summary>
@@ -219,4 +216,4 @@ public class HillCipher
 
         return blocks;
     }
-}  
+}
