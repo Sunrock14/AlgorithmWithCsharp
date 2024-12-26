@@ -33,7 +33,7 @@ public class CeaserCipher
 
     const int Shift = 3;
 
-    public static string Encrypt(string plaintext)
+    public static string CeaserEncrypt(string plaintext)
     {
         string result = "";
         foreach (char c in plaintext)
@@ -50,7 +50,7 @@ public class CeaserCipher
         }
         return result;
     }
-    public static string Decrypt(string ciphertext)
+    public static string CeaserDecrypt(string ciphertext)
     {
         string result = "";
         foreach (char c in ciphertext)

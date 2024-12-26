@@ -1,0 +1,14 @@
+@Cryptography.App_HostAddress = http://localhost:5267
+
+POST {{Cryptography.App_HostAddress}}/vigenere-encrypt
+Content-Type: application/json
+{
+  "plaintext": "HelloWorld!1"
+}
+
+### Þifre Çözme (Decrypt)  
+POST {{Cryptography.App_HostAddress}}/vigenere-decrypt  
+Content-Type: application/json  
+{  
+  "ciphertext": "FsfcjBuvyh!1"  
+}

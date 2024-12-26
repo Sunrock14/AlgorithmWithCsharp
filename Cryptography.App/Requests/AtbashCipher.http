@@ -1,0 +1,7 @@
+@Cryptography.App_HostAddress = http://localhost:5267
+
+POST {{Cryptography.App_HostAddress}}/atbash
+Content-Type: application/json
+{  
+  "plaintext": "HelloWorld!" 
+}  

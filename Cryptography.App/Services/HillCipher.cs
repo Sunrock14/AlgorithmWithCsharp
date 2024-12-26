@@ -25,7 +25,7 @@
 /// 3.Şifre Çözme:
 /// P=(K^−1⋅C) mod26
 /// </summary>
-public class HillCipher
+public class HillCipher // 3x3 gibi bir matris içinde yapılabilir
 {
     private readonly int[,] _keyMatrix = { { 3, 3 }, { 2, 5 } }; // Örnek anahtar matrisi  
     private readonly int _mod = 26;
@@ -39,7 +39,7 @@ public class HillCipher
         }
     }
 
-    public string Encrypt(string plaintext)
+    public string HillEncrypt(string plaintext)
     {
         plaintext = NormalizeText(plaintext);
         int blockSize = _keyMatrix.GetLength(0);
@@ -48,7 +48,7 @@ public class HillCipher
         return string.Concat(blocks.Select(block => EncryptBlock(block)));
     }
 
-    public string Decrypt(string ciphertext)
+    public string HillDecrypt(string ciphertext)
     {
         int blockSize = _keyMatrix.GetLength(0);
         var blocks = CreateBlocks(ciphertext, blockSize);
