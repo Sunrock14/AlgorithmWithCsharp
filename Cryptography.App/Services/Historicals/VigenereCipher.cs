@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services;
+﻿namespace Cryptography.App.Services.Historicals;
 
 /// <summary>
 /// Tarihçesi
@@ -50,13 +50,13 @@ public class VigenereCipher
             if (char.IsLetter(c))
             {
                 char offset = char.IsUpper(c) ? 'A' : 'a';
-                char keyChar = char.IsUpper(c) ? 
-                    char.ToUpper(key[keyIndex % keyLength]) : 
+                char keyChar = char.IsUpper(c) ?
+                    char.ToUpper(key[keyIndex % keyLength]) :
                     char.ToLower(key[keyIndex % keyLength]);
 
                 int shift = keyChar - offset;
 
-                result += (char)(((c - offset + shift) % 26) + offset);
+                result += (char)((c - offset + shift) % 26 + offset);
                 keyIndex++;
             }
             else
@@ -78,13 +78,13 @@ public class VigenereCipher
             if (char.IsLetter(c))
             {
                 char offset = char.IsUpper(c) ? 'A' : 'a';
-                char keyChar = char.IsUpper(c) ? 
-                    char.ToUpper(key[keyIndex % keyLength]) : 
+                char keyChar = char.IsUpper(c) ?
+                    char.ToUpper(key[keyIndex % keyLength]) :
                     char.ToLower(key[keyIndex % keyLength]);
 
                 int shift = keyChar - offset;
 
-                result += (char)(((c - offset - shift + 26) % 26) + offset);
+                result += (char)((c - offset - shift + 26) % 26 + offset);
                 keyIndex++;
             }
             else

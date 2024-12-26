@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services;
+﻿namespace Cryptography.App.Services.Historicals;
 
 public class CeaserCipher
 {
@@ -41,7 +41,7 @@ public class CeaserCipher
             if (char.IsLetter(c))
             {
                 char offset = char.IsUpper(c) ? 'A' : 'a';
-                result += (char)(((c + Shift - offset) % 26) + offset);
+                result += (char)((c + Shift - offset) % 26 + offset);
             }
             else
             {
@@ -58,7 +58,7 @@ public class CeaserCipher
             if (char.IsLetter(c))
             {
                 char offset = char.IsUpper(c) ? 'A' : 'a';
-                result += (char)(((c - Shift - offset + 26) % 26) + offset);
+                result += (char)((c - Shift - offset + 26) % 26 + offset);
             }
             else
             {

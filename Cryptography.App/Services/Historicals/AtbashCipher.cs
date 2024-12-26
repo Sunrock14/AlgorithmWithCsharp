@@ -1,6 +1,6 @@
 ﻿using System.Reflection.Emit;
 
-namespace Cryptography.App.Services;
+namespace Cryptography.App.Services.Historicals;
 
 /// <summary>
 /// Tarihçe

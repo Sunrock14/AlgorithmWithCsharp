@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services;
+﻿namespace Cryptography.App.Services.Historicals;
 /// <summary>
 /// Tarihçesi
 /// 
@@ -101,7 +101,7 @@ public class HillCipher // 3x3 gibi bir matris içinde yapılabilir
         {
             for (int j = 0; j < size; j++)
             {
-                inverse[i, j] = (adjugate[i, j] * determinantInverse) % _mod;
+                inverse[i, j] = adjugate[i, j] * determinantInverse % _mod;
                 if (inverse[i, j] < 0) inverse[i, j] += _mod;
             }
         }
@@ -134,7 +134,7 @@ public class HillCipher // 3x3 gibi bir matris içinde yapılabilir
         a %= m;
         for (int x = 1; x < m; x++)
         {
-            if ((a * x) % m == 1) return x;
+            if (a * x % m == 1) return x;
         }
         throw new ArgumentException("Matrisin çarpımsal tersi yok");
     }

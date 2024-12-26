@@ -1,9 +1,9 @@
 using Cryptography.App.Models;
-using Cryptography.App.Services;
+using Cryptography.App.Services.Historicals;
 using Microsoft.OpenApi.Models;
-using static Cryptography.App.Services.AtbashCipher;
-using static Cryptography.App.Services.CeaserCipher;
-using static Cryptography.App.Services.VigenereCipher;
+using static Cryptography.App.Services.Historicals.AtbashCipher;
+using static Cryptography.App.Services.Historicals.CeaserCipher;
+using static Cryptography.App.Services.Historicals.VigenereCipher;
 
 var builder = WebApplication.CreateBuilder(args);
 
