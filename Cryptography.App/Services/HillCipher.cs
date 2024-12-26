@@ -114,7 +114,12 @@ public class HillCipher
 
         return inverse;
     }
-
+    /// <summary>
+     /// 2x2 matrisin determinantını hesaplar
+     /// </summary>
+     /// <param name="matrix">Determinantı hesaplanacak matrix</param>
+     /// <returns>Determinant değeri</returns>
+     /// <exception cref="NotImplementedException">2x2'den büyük matrisler için fırlatılır</exception>
     private int Determinant(int[,] matrix)
     {
         // Only supports 2x2 matrices for simplicity  
@@ -124,7 +129,13 @@ public class HillCipher
         }
         throw new NotImplementedException("Determinant calculation for larger matrices is not implemented.");
     }
-
+    /// <summary>
+    /// Modüler çarpımsal tersi hesaplar
+    /// </summary>
+    /// <param name="a">Tersi alınacak sayı</param>
+    /// <param name="m">Mod değeri</param>
+    /// <returns>Modüler çarpımsal ters</returns>
+    /// <exception cref="ArgumentException">Modüler ters bulunamazsa fırlatılır</exception>
     private int ModInverse(int a, int m)
     {
         a %= m;
@@ -159,7 +170,12 @@ public class HillCipher
         int determinant = Determinant(matrix);
         return Gcd(determinant, _mod) == 1;
     }
-
+    /// <summary>
+    /// İki sayının en büyük ortak bölenini hesaplar
+    /// </summary>
+    /// <param name="a">Birinci sayı</param>
+    /// <param name="b">İkinci sayı</param>
+    /// <returns>En büyük ortak bölen</returns>
     private int Gcd(int a, int b)
     {
         while (b != 0)
@@ -180,7 +196,12 @@ public class HillCipher
     {
         return new string(text.ToUpper().Where(char.IsLetter).ToArray());
     }
-
+    /// <summary>
+    /// Metni belirtilen boyutta bloklara böler
+    /// </summary>
+    /// <param name="text">Bölünecek metin</param>
+    /// <param name="blockSize">Blok boyutu</param>
+    /// <returns>Bloklar dizisi</returns>
     private int[][] CreateBlocks(string text, int blockSize)
     {
         int paddedLength = (int)Math.Ceiling((double)text.Length / blockSize) * blockSize;
