@@ -1,0 +1,16 @@
+@Cryptography.App_HostAddress = http://localhost:5267
+
+
+# Þifreleme (Encrypt)  
+POST {{Cryptography.App_HostAddress}}/ceaser-encrypt  
+Content-Type: application/json
+{  
+  "plaintext": "Hello World!1"  
+}  
+
+### Þifre Çözme (Decrypt)  
+POST {{Cryptography.App_HostAddress}}/ceaser-decrypt  
+Content-Type: application/json  
+{  
+  "ciphertext": "Khoor Zruog!1"  
+}

@@ -1,0 +1,16 @@
+@Cryptography.App_HostAddress = https://localhost:44390
+
+
+# Þifreleme (Encrypt)  
+POST {{Cryptography.App_HostAddress}}/hill-encrypt  
+Content-Type: application/json
+{  
+  "plaintext": "Hello World!1"  
+}  
+
+### Þifre Çözme (Decrypt)  
+POST {{Cryptography.App_HostAddress}}/hill-decrypt  
+Content-Type: application/json  
+{  
+  "ciphertext": "HIOZEIPJQL"  
+}
