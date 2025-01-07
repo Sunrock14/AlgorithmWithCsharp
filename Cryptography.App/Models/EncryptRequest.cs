@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Models;
+﻿namespace Algorithm.Models;
 
 public class EncryptRequest
 {
