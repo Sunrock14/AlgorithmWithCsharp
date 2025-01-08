@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.DataStructure.DataStructure
+namespace Algorithm.BasicsDataStructure.DataStructure
 {
     internal class SortedLists
     {

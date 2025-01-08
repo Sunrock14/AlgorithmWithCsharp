@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services.Historicals
+﻿namespace Algorithm.Cryptography.CryptographyAlgorithm.Historicals
 {
     public class TranspositionCipher
     {

@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services.Symmetrics
+﻿namespace Algorithm.Cryptography.CryptographyAlgorithm.Symmetrics
 {
     public class SerpentCipher
     {

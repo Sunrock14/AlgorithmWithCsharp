@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services.Asymmetrics
+﻿namespace Algorithm.Cryptography.CryptographyAlgorithm.Asymmetrics
 {
     public class DiffieHellmanCipher
     {

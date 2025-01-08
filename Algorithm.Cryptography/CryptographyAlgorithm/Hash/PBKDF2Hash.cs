@@ -1,4 +1,4 @@
-﻿namespace Cryptography.App.Services.Hash
+﻿namespace Algorithm.Cryptography.CryptographyAlgorithm.Hash
 {
     public class PBKDF2Hash
     {

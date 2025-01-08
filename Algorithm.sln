@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Cryptography.App\Algorithm.csproj", "{DC8F29C4-CE47-4EA4-8FB1-C09E7681D1C9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.Sorting", "Algorithm.Sorting\Algorithm.Sorting.csproj", "{99E5A979-7BBF-4C33-94E7-BAD7F7DC5B1D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.Cryptography", "Algorithm.Cryptography\Algorithm.Cryptography.csproj", "{6947FCBC-D038-406D-B639-7D18534347F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.ProblemSolvingTechniques", "Algorithm.ProblemSolvingTechniques\Algorithm.ProblemSolvingTechniques.csproj", "{3B519636-1F32-4D9B-9A18-439CEC41B9FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.DataStructure", "Algorithm.DataStructure\Algorithm.DataStructure.csproj", "{AC3B633F-BE1E-4FC4-B8F5-693C57B44692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.BasicsDataStructure", "Algorithm.DataStructure\Algorithm.BasicsDataStructure.csproj", "{AC3B633F-BE1E-4FC4-B8F5-693C57B44692}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.AlgorithmicComplexity", "Algorithm.AlgorithmicComplexity\Algorithm.AlgorithmicComplexity.csproj", "{01FD9925-8C54-4A5F-A7E4-84132F40F75E}"
 EndProject
@@ -19,16 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.Trees", "Algorith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.Graphs", "Algorithm.Graphs\Algorithm.Graphs.csproj", "{D4E1AB3D-4CAB-4A54-9DEB-504CD26ACAED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Algorithm\Algorithm.csproj", "{BE66E35A-87B4-4B8A-BE2B-75626653E969}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC8F29C4-CE47-4EA4-8FB1-C09E7681D1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC8F29C4-CE47-4EA4-8FB1-C09E7681D1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC8F29C4-CE47-4EA4-8FB1-C09E7681D1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC8F29C4-CE47-4EA4-8FB1-C09E7681D1C9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{99E5A979-7BBF-4C33-94E7-BAD7F7DC5B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{99E5A979-7BBF-4C33-94E7-BAD7F7DC5B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99E5A979-7BBF-4C33-94E7-BAD7F7DC5B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{D4E1AB3D-4CAB-4A54-9DEB-504CD26ACAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E1AB3D-4CAB-4A54-9DEB-504CD26ACAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E1AB3D-4CAB-4A54-9DEB-504CD26ACAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE66E35A-87B4-4B8A-BE2B-75626653E969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE66E35A-87B4-4B8A-BE2B-75626653E969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE66E35A-87B4-4B8A-BE2B-75626653E969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE66E35A-87B4-4B8A-BE2B-75626653E969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
